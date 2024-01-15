@@ -2,29 +2,29 @@
 //Eg:- 'BOB loves-coding'
 //output :- bobLovesCoding
 
-var str = "bob loves-code"
+var str = "bob loves code"
 
- var str2 = ''
+//  var str2 = ''
 
 //  str.split(' ').map((v) => {
 //     str2 += v[0].toUpperCase() + v.slice(1)
 //  })
  
 
- console.log(str.split(' '))
- console.log(str.split('-'))
+//  console.log(str.split(' '))
+// //  console.log(str.split('-'))
 
 
 
-// function camelCase(str){
-//     var str2 = str.toLowerCase()
-//     for(let i in str2){
-//         if(str2[i] == ' ' || str2[i] == '-'){
-//             newStr = str2.slice(0 , i)
+function camelCase(str){
+    var str2 = str.toLowerCase()
+    for(let i in str2){
+        if(str2[i] == ' ' || str2[i] == '-'){
+            newStr = str2.slice(0 , i)
 
-//         }
-//     }
-//     return newStr
-// }
+        }
+    }
+    return newStr
+}
 
-// console.log(camelCase(str))
+console.log(camelCase(str))

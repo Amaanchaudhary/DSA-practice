@@ -30,5 +30,8 @@ function decrementStar(){
     return str
 }
 
-// console.log(incrementStar())
-console.log(decrementStar())
+console.log(incrementStar(4))
+
+// console.log(decrementStar())
+
+

@@ -5,6 +5,9 @@
 // 1
 
 var i = 10;
+var str = ''
+
+var i = 10;
 var str = ``
 
 while(i > 0){
