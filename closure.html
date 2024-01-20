@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+</body>
+
+    <script>
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }   
+
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }   
+
+        function handleClick(color){
+            // document.body.style.backgroundColor = `${color}`
+            return function(){
+                 document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById("orange").onclick = handleClick("orange")  
+        document.getElementById("green").onclick = handleClick("green")
+
+    </script>
+
+    <script>
+        //Lexical Scoping
+        // function init(){
+        //     let name = 'Amaan'
+        //     function displayName(){
+        //         console.log(name);
+        //     }
+        //     displayName()
+        // }
+        // init()
+
+        // function Outer(){
+        //     let username = "amaan1"
+        //     // console.log("In outer" , secret) //no access
+
+        //     function inner(){
+        //         var secret = "123"
+        //         console.log("Inner" , username)
+        //     }
+        //     function inner2(){
+        //         console.log("Inner2" , username)
+        //         // console.log("In inner2" , secret)  // no access
+        //     }
+        //     inner();
+        //     inner2();
+        // }
+        // Outer();
+        // console.log("Outer" , username)   //no access
+    </script>
+
+    <script>
+
+        //Closure
+        function makeFunc(){
+            const name = "Amaan"
+            function displayName(){
+                console.log(name)
+            }
+            return displayName   //Reference Passed full Lexical scope will returned not only displayName
+        }
+        const myFunc = makeFunc()
+        myFunc();
+
+    </script>
+
+</html>
