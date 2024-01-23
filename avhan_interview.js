@@ -38,14 +38,14 @@ for(var i = 0 ; i < nums.length ; i++){         //bubble sort algorithm
 
 //Q3. Given an array of numbers, use forEach method to print duplicate numbers 
 
-const numberss = [2 , 3 , 4 , 2 , 5 , 4] 
+const numberss = [2 , 3 , 4 , 2 , 5 , 4 , 2 , 2] 
 const duplicate = []
 
 numberss.forEach((item , index , arr) => {
     let target = item
     let i = index+1
-    while(i < arr.length){                  //my approach
-        if(arr[i] == target){
+    while(i < arr.length){                                        //my approach
+        if(arr[i] == target && duplicate.indexOf(item) == -1){
             duplicate.push(arr[i])
         }
         i++
