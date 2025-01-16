@@ -1,13 +1,21 @@
-const myList = ["home", , "school", ,];
 
-//1.
-console.log(myList)
+//! (Not) 
+console.log(!true); // false
+console.log(!0);    // true
+console.log(!"");   // true
+console.log(!"Hello"); // false
 
-//2.
-console.log(myList.length)
 
-//3.
-console.log(myList[1])
+//!! (Double NOT)
+console.log(!!true);    // true
+console.log(!!0);       // false
+console.log(!!"Hello"); // true
+console.log(!!"");      // false
 
-//4.
-myList.map(item => console.log(item))
+
+//Quick Quiz: Can You Guess the Outputs?
+console.log(!null);     // 🤔
+console.log(!!"false"); // 🤔
+console.log(!42);       // 🤔
+
+
