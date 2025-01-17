@@ -1,21 +1,14 @@
 
-//! (Not) 
-console.log(!true); // false
-console.log(!0);    // true
-console.log(!"");   // true
-console.log(!"Hello"); // false
 
+let nums = [1, 2, 3];
+nums.extra = "unexpected"; // Custom property
 
-//!! (Double NOT)
-console.log(!!true);    // true
-console.log(!!0);       // false
-console.log(!!"Hello"); // true
-console.log(!!"");      // false
+for (let key in nums) {
+    console.log(key); // Outputs: 0, 1, 2, extra
+}
 
-
-//Quick Quiz: Can You Guess the Outputs?
-console.log(!null);     // 🤔
-console.log(!!"false"); // 🤔
-console.log(!42);       // 🤔
+for (let val of nums) {
+    console.log(val); // Outputs : 0, 1, 2
+}
 
 
