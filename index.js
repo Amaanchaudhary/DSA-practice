@@ -1,31 +1,17 @@
 
+const readline = require("readline");
 
-var plusOne = function (digits) {
-    let length = digits.length //1
-    let find = 9
-    if (digits[length - 1] != 9) {
-        digits[length - 1] += 1
-        return digits
-    } else {
-        let i = length - 1 //0
-        while (find == 9 && i >= 0) {
-            if (digits[i] != 9) {
-                find = digits[i]
-                digits[i] += 1
-                i--
-            } else {
-                digits[i] = 0
-                i--
-            }
-        }
-        if (find != 9) {
-            digits.unshift(1)
-        }
-    }
-    return digits
-};
+const rl = readline.createInterface({
+    input : process.stdin,// Read input from terminal (user typing)
+    output: process.stdout  // Print output to terminal
+})
 
+rl.question("please enter numbers ", (input) => {
+    // Convert input string into an array of numbers
+    const digits = input.split("").map(Number);
 
-console.log(plusOne([9,9,9]));
+    // Call the function and print the result
+    console.log("Result:", digits);
 
-
+    rl.close()
+})
