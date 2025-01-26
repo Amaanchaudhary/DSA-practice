@@ -1,14 +1,17 @@
 
+const readline = require("readline");
 
-let nums = [1, 2, 3];
-nums.extra = "unexpected"; // Custom property
+const rl = readline.createInterface({
+    input : process.stdin,// Read input from terminal (user typing)
+    output: process.stdout  // Print output to terminal
+})
 
-for (let key in nums) {
-    console.log(key); // Outputs: 0, 1, 2, extra
-}
+rl.question("please enter numbers ", (input) => {
+    // Convert input string into an array of numbers
+    const digits = input.split("").map(Number);
 
-for (let val of nums) {
-    console.log(val); // Outputs : 0, 1, 2
-}
+    // Call the function and print the result
+    console.log("Result:", digits);
 
-
+    rl.close()
+})
