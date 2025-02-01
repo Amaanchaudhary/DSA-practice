@@ -1,39 +1,46 @@
-var spiralOrder = function(matrix) {
-    let result = [];
-    let top = 0, bottom = matrix.length - 1;
-    let left = 0, right = matrix[0].length - 1;
+/**
+ * @param {number[][]} matrix
+ * @return {number[]}
+ */
+var spiralOrder = function (matrix) {
+    let result = []
+    let m = matrix.length, n = matrix[0].length
+    let srow = 0, erow = m - 1
+    let scol = 0, ecol = n - 1
+    
+    while (scol <= ecol && srow <= erow) { //outer Loop | 2.while condition
+        //1. Logic boundries
+        //3. corner cases 
 
-    while (top <= bottom && left <= right) {
-        // Traverse from left to right
-        for (let i = left; i <= right; i++) {
-            result.push(matrix[top][i]);
+        //Top
+        for (let j = scol; j <= ecol; j++) {
+            result.push(matrix[srow][j])
         }
-        top++; // Move the top boundary down
 
-        // Traverse from top to bottom
-        for (let i = top; i <= bottom; i++) {
-            result.push(matrix[i][right]);
+        //Right
+        for (let j = srow + 1 ; j <= erow; j++) {
+            result.push(matrix[j][ecol])
         }
-        right--; // Move the right boundary left
 
-        // Traverse from right to left (if there's still a row)
-        if (top <= bottom) {
-            for (let i = right; i >= left; i--) {
-                result.push(matrix[bottom][i]);
+        //Bottom
+        for (let j = ecol - 1; j >= scol; j--) {
+            if (srow === erow) {
+                break  //odd row case top and bottom should print only once
             }
-            bottom--; // Move the bottom boundary up
+            result.push(matrix[erow][j])
         }
 
-        // Traverse from bottom to top (if there's still a column)
-        if (left <= right) {
-            for (let i = bottom; i >= top; i--) {
-                result.push(matrix[i][left]);
+        //Left  
+        for (let j = erow - 1; j >= srow + 1; j--) {
+            if (scol === ecol) {
+                break  //odd col case left and right should print only once 
             }
-            left++; // Move the left boundary right
+            result.push(matrix[j][scol])
         }
+     // Move to the inner sub-matrix
+        srow++, scol++, erow--, ecol--
     }
-
-    return result;
+    return result
 };
 
 console.log(spiralOrder([[1,2,3],[4,5,6]]));
