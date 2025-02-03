@@ -15,3 +15,4 @@ rl.question("please enter numbers ", (input) => {
 
     rl.close()
 })
+
