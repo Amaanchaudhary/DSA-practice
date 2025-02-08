@@ -7,10 +7,11 @@ var spiralOrder = function (matrix) {
     let m = matrix.length, n = matrix[0].length
     let srow = 0, erow = m - 1
     let scol = 0, ecol = n - 1
-    
+
     while (scol <= ecol && srow <= erow) { //outer Loop | 2.while condition
         //1. Logic boundries
         //3. corner cases 
+
 
         //Top
         for (let j = scol; j <= ecol; j++) {
@@ -18,7 +19,7 @@ var spiralOrder = function (matrix) {
         }
 
         //Right
-        for (let j = srow + 1 ; j <= erow; j++) {
+        for (let j = srow + 1; j <= erow; j++) {
             result.push(matrix[j][ecol])
         }
 
@@ -37,10 +38,11 @@ var spiralOrder = function (matrix) {
             }
             result.push(matrix[j][scol])
         }
-     // Move to the inner sub-matrix
+
+        // Move to the inner sub-matrix
         srow++, scol++, erow--, ecol--
     }
     return result
 };
 
-console.log(spiralOrder([[1,2,3],[4,5,6]]));
+console.log(spiralOrder([[1, 2, 3], [4, 5, 6]]));
