@@ -38,11 +38,12 @@ var spiralOrder = function (matrix) {
             }
             result.push(matrix[j][scol])
         }
-
         // Move to the inner sub-matrix
         srow++, scol++, erow--, ecol--
     }
     return result
 };
+
+
 
 console.log(spiralOrder([[1, 2, 3], [4, 5, 6]]));
