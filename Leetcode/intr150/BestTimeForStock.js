@@ -1,11 +1,18 @@
-function MaxProfit(prices){
-    let maxProfit = 0
+function MaxProfit(prices) {
+    let maxProfit = 0;
+    let minPrice = Infinity;
+
     for (let i = 0; i < prices.length; i++) {
-        if(prices[i] > prices[i-1]){
-            maxProfit += prices[i] - prices[i-1]
+        if (prices[i] < minPrice) {
+            minPrice = prices[i]
+        } else {
+            maxProfit = prices[i] - minPrice > maxProfit ?
+                prices[i] - minPrice : maxProfit
         }
     }
+
     return maxProfit
 }
 
-console.log(MaxProfit([2, 1 , 6 , 1 , 1 , 1 , 2]));
+
+console.log(MaxProfit([9, 8, 9, 16, 1]));
