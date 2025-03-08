@@ -1,10 +1,11 @@
-const array = [2, 8, 5, 1, 9]
-// console.log(findMaxValue(array))
+const array = [2, 18, 5, 1, 9]
+console.log(findMaxValue(array))
 
 function findMaxValue(array){
-    var max = array[0]
-    for(var i = 1 ; i < array.length ; i++){
-        max = array[i] > max? array[i] : max
+    let max = array[0]
+
+    for(let val of array){
+        max = val > max ? val : max
     }
     return max
 }

@@ -1,5 +1,5 @@
 function countProperties(Input){
-    var total = Object.keys(Input)
+    var total = Object.values(Input)
     return total.length
 }
 

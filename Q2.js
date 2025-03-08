@@ -1,13 +1,11 @@
-function doesKeyExist(obj, key){
-    if(obj[key]){
+function doesKeyExist(obj, key) {
+    if (key in obj) {
         return true
-    }else{
-        return false
     }
-    
+    return false
 }
 
 
-var obj = {name: 'John', age: 25, city: 'New York'}, key = 'age';   
+var obj = { name: 'John', age: 25, city: 'New York' }, key = '1age';
 
 console.log(doesKeyExist(obj, key))
