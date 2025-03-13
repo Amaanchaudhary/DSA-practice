@@ -19,7 +19,7 @@ const userOne = {        //This is object(Non_primitive) so heap memory is used
 const userTwo = userOne  //Now userTwo is holding userOne original reference of userOne 
 // mean both are addressing the same memory location
 
-userTwo.name = "Maaz"  //here i changed the userTwo name but both are in same memory
+userTwo.name = "Ammmm"  //here i changed the userTwo name but both are in same memory
 
 // console.log(userOne.name)  //both are get change
 // console.log(userTwo.name)  
