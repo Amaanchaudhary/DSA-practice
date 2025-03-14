@@ -50,7 +50,7 @@ function removeDuplicates4(array) {
 
 
 const array = [1, 1, 2, 2, 3, 4, 4, 4, 4, 5, 5] //Sorted
-const array2 = [1, 11, 22, 2, 1, 4, 4, 14, 4, 5, 5]  //UnSorted
+const array2 = [1, 11, 22, 2, 1, 4, 4, 5, 5]  //UnSorted
 
 console.log(removeDuplicates4(array2))
 

@@ -5,7 +5,5 @@ function doesKeyExist(obj, key) {
     return false
 }
 
-
-var obj = { name: 'John', age: 25, city: 'New York' }, key = '1age';
-
+var obj = { name: 'John', age: 25, city: 'New York' }, key = 'age';
 console.log(doesKeyExist(obj, key))
