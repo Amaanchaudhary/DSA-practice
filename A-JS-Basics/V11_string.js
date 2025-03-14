@@ -20,7 +20,7 @@ const anotherString = name2.slice(-2)       // last 2 char
 
 // console.log(anotherString)
 
-const strWithSpaces = "   ama ann   "
+const strWithSpaces = "   ama aaann   "
 // console.log(strWithSpaces.trim());   //ama ann
 
 const str = "amaan@gmail.com.com"   //replace only replace the very first match string

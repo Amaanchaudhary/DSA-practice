@@ -8,7 +8,7 @@ const id2 = Symbol("123") //they return the different value
 
 // console.log(id === id2);  //false
 
-const bigNum = 121223232323232323n //put n to the last of the whole number
+const bigNum = 121223232323223323n //put n to the last of the whole number
 // console.log(typeof bigNum);  //this will become BigInt
 // console.log(typeof amaan);  //amaan is not a variable,then also it will return undefined  
 
