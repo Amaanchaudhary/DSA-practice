@@ -5,7 +5,6 @@ const rl = readline.createInterface({
     output: process.stdout  // Print output to terminal
 })
 
-
 var plusOne = function (digits) {
     let length = digits.length;
     for (let i = length - 1; i >= 0; i--) {

@@ -11,4 +11,5 @@ var singleNumber = function (nums) {
     return result;
 };
 
+
 console.log(singleNumber([1,2,3,2,1]));

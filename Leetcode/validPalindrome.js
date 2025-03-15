@@ -21,6 +21,7 @@ var isPalindrome = function (s) {
   return true
 };
 
+
 //two pointer approach  space complexity 0(1)
 var isPalindrome2 = function (s) {
   // replace all char with "" except a - z and 0 - 9
