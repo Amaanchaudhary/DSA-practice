@@ -8,6 +8,5 @@ function reverseArray(array) {
     return array
 }
 
-
 const array = [5, 10, 20, 1]
 console.log(reverseArray(array))
