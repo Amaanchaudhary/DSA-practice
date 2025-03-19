@@ -15,7 +15,6 @@ var str = "bob loves code"
 // //  console.log(str.split('-'))
 
 
-
 function camelCase(str){
     var str2 = str.toLowerCase()
     for(let i in str2){

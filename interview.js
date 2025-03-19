@@ -11,6 +11,5 @@ console.log(obj2)
 
 //closure in javascript
 //lifecycle of react
-
 //post increment , pre increment optr
 

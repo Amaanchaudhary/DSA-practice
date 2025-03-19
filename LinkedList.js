@@ -44,7 +44,7 @@ const list = new LinkedList(); // Create a new LinkedList instance
 
 list.append(10); // Add node with value 10
 list.append(20); // Add node with value 20
-list.append(30); // Add node with value 30
-list.append(40); // Add node with value 40
+list.append(50); // Add node with value 30
+list.append(70); // Add node with value 40
 
 list.display(); // Output: 10 -> 20 -> 30 -> 40 -> null
