@@ -15,7 +15,8 @@ const removeElements = (nums , val) => {
             i--
         }
     }
-
     return k = nums.length
 }
+
+
 console.log(removeElements(nums , val ))

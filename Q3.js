@@ -1,4 +1,5 @@
 
+
 function findMaxValue(array) {
     let max = array[0]
 
