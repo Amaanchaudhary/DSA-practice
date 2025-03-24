@@ -13,11 +13,9 @@ const newString = name2.substring(0 , 4)  //from 0 to 3rd position , it will ign
                                           //(2) if only 1 val mean it'll go 2 to end
 // console.log(newString)
 
-
 // const anotherString = name2.slice(0 , 3)  //slice also take negative val and start from end
 // const anotherString = name2.slice(-2)    //only last char
 const anotherString = name2.slice(-2)       // last 2 char
-
 // console.log(anotherString)
 
 const strWithSpaces = "   ama aaann   "
